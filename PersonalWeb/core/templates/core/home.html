@@ -1,0 +1,16 @@
+<!---- EXTENDEMOS EL MENÚ -->
+{% extends 'core/base.html' %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+{% block header %}
+    <h1>Eduardo Peñarrieta</h1>
+    <span class="subheading">Estudiante</span>
+{% endblock %}
+
+{% block content %}
+    <h2>Portada</h2>
+    <p> Nuesta Portada del proyecto</p>
+{% endblock %}

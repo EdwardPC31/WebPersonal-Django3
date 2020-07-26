@@ -1,0 +1,26 @@
+
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
+
+{% block header %}
+    <h1>Acerca de</h1>
+    <span class="subheading">Biografía</span>
+{% endblock %}
+
+{% block content %}
+   <div class="container">
+      <div class="row">   
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/avatar.png' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">Eduardo Peñarrieta</h2>   
+          <p>Nacido en Portoviejo el 31 de marzo de 1996, actualmente con 24 años de edad. estudia en la Universidad Técnica de Manabi</p>
+          <p>Sus inicios en la computacion comenzo desde muy temprana edad ya contando con una versatilidad en el manejo de un conputador</p>
+        </div>
+      </div>  
+    </div>
+{% endblock %}

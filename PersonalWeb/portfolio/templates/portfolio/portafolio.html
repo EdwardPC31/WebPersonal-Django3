@@ -1,0 +1,32 @@
+
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block header %}
+    <h1>Portafolio</h1>
+	<span class="subheading">Currículum</span>
+{% endblock %}
+
+{% block content %}
+	{% for Project in Projects %}
+  		<!-- Proyecto -->
+	
+	    <div class="row project">  	
+			<div class="col-lg-3 col-md-4 offset-lg-1">
+				<img class="img-fluid" src="{{ Project.imagen.url }}" %} alt="">
+			</div>
+			<div class="col-lg-7 col-md-8">
+				<h2 class="section-heading title">{{Project.titulo}}</h2>   
+				<p>{{Project.descripcion}}</p>
+
+					{% if Project.link %}
+						<p><a href="{{Project.link}}">Más información</a></p> 
+					{% endif %}
+			</div>
+	    </div
+		</div>
+	{% endfor %}
+{% endblock %}
